@@ -1,7 +1,7 @@
 site_name: Blog
 site_description: My personal blog
 repo_name: cnpryer/cnpryer.github.io
-repo_url: https://github.com/cnpryer/huak
+repo_url: https://github.com/cnpryer/cnpryer.github.io
 
 nav:
   - Posts: index.md
