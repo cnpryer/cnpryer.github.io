@@ -32,13 +32,13 @@ To understand our DT in more detail it's important to get to know the core opera
 The TM department is responsible for the delivery of product throughout the customer's supply chain network. This could mean moving product from a plant to an end retailer. 
 
 <p align="center">
-  <img src="../assets/img/simple_supply_chain.png" alt="Simple Supply Chain" width="50%">
+  <img src="https://github.com/cnpryer/cnpryer.github.io/blob/main/assets/img/simple_supply_chain.png?raw=true" alt="Simple Supply Chain" width="50%">
 </p>
 
 Along the way might be several steps. And each step might vary in complexity. 
 
 <p align="center">
-  <img src="../assets/img/complex_supply_chain1.png" alt="Simple Supply Chain" width="70%">
+  <img src="https://github.com/cnpryer/cnpryer.github.io/blob/main/assets/img/complex_supply_chain1.png?raw=true" alt="Complex Supply Chain" width="70%">
 </p>
 
 Our TM team can comb through your network and prescribe routes based on your specific needs. As a provider we're able to optimize things like transportation costs by implementing clever strategies like backhaul matching based on volume to, from, and across regions.
@@ -163,7 +163,7 @@ For the second use-case ("2. An interface for running a scenario") we needed to 
 If you're building a scenario that adds a new carrier to the customer's route guide you'll need more source data. If you're building a scenario that adds that new carrier **and** modifies a constraint, you're going to want to avoid having to introduce the new route guide data again.
 
 <p align="center">
-  <img src="../assets/img/simple_scenario_branch.png" alt="Simple Supply Chain" width="50%">
+  <img src="https://github.com/cnpryer/cnpryer.github.io/blob/main/assets/img/simple_scenario_branch.png?raw=true" alt="Simple Scenario Branch" width="50%">
 </p>
 
 One way to do this would be to store model transformations with versioning. So scenario runs can reference data from already implemented transformations.
