@@ -210,7 +210,7 @@ We intentionally limited scope so that focus was on hot paths for value. If modi
 
 It's possible there are unique scenarios that provide as much (if not more) value as the low-hanging-fruit we've focused on. In fact, we actually have experience with this already.
 
-We've developed scenarios that specifically modify constraints at a location-level where a new mode was introduced to their network. In our experience this kind of mode conversion is difficult to achieve. Specifically it was introducing inter-modal to their network -- which requires coordination from as far upstream as the vendor to as downstream as the individual retailer.
+We've developed scenarios that specifically modify constraints at a location-level where a new mode was introduced to their network. In our experience this kind of mode conversion is difficult to achieve. Specifically it was introducing intermodal to their network -- which requires coordination from as far upstream as the vendor to as downstream as the individual retailer.
 
 This is often very difficult to implement since vendors and retailers possess some of the most influence in the operation.
 
