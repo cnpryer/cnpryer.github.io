@@ -128,7 +128,7 @@ You can think of orders as the product. An order can have scheduling. It has a p
 
 Route guides act as a profile for routing logic. This consists of rates, rankings, allocations, other constraints, etc.
 
-To emulate these operations we need to store this important data in a way where we can reliably produce routing scenarios from.
+To emulate these operations we need to store this important data in a way that allows us to reliably produce routing scenarios.
 
 At a high level we store the following as source data for the DT:
 
