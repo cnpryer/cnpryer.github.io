@@ -214,6 +214,10 @@ We've developed scenarios that specifically modify constraints at a location-lev
 
 This is often very difficult to implement since vendors and retailers possess some of the most influence in the operation.
 
+<p align="center">
+  <img src="https://github.com/cnpryer/cnpryer.github.io/blob/main/assets/img/intermodal_scenario.png?raw=true" alt="Intermodal Scenario" width="70%">
+</p>
+
 We knew we had to open up the flood gates just a little to expose ourselves to the unique scenarios our customers might want to develop.
 
 ### Getting data in more hands
