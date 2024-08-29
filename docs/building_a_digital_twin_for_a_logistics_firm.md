@@ -17,7 +17,7 @@ My journey building a Digital Twin (DT) for a logistics firm -- lessons learned 
 
 ## What is a Digital Twin (DT)?
 
-I work for a logistics firm called [NFI Industries](https://nfiindustries.com). The company offers a variety of services and resources to other businesses to manage or support their supply chains.
+I work for a logistics firm as a Principal Software Engineer. The company offers a variety of services and resources to other businesses to manage or support their supply chains.
 
 The company has a division referred to as Integrated Logistics. Under that umbrella is a department called Transportation Management (TM). You can think of that department as a kind of business outsource that specializes in transportation routing and related services.
 
@@ -45,13 +45,13 @@ Our TM team can comb through your network and prescribe routes based on your spe
 
 The TM team leverages another system developed specifically for logistics firms like ours. That system houses all of the integrations, planning parameters, and other constraints for routes to be executed using. The system gives our business the ability to model customer-specific profiles for routing operations.
 
-The routing operations **will** vary by customer. This is an important aspect of NFI's value proposition. So we are modeling the operations surrounding and executed via that specialized system.
+The routing operations **will** vary by customer. This is an important aspect of the business' value proposition. So we are modeling the operations surrounding and executed via that specialized system.
 
 The DT is a separate system used to emulate that entire operation.
 
 ## Minimum Viable Product (MVP)
 
-I started out at NFI developing specialized models for our customers. The first few years of my career I spent a lot of time on complicated projects that took several months to deliver. The work gave me unique experience building supply chain network and transportation models at scale for large businesses.
+I started out at this company developing specialized models for our customers. The first few years of my career I spent a lot of time on complicated projects that took several months to deliver. The work gave me unique experience building supply chain network and transportation models at scale for large businesses.
 
 This experience allowed me to learn what about these models are often found valuable in an engagement with a customer. It also helped me learn useful methods for experimenting with feedback loops during these projects.
 
@@ -210,7 +210,7 @@ We intentionally limited scope so that focus was on hot paths for value. If modi
 
 It's possible there are unique scenarios that provide as much (if not more) value as the low-hanging fruit we've focused on. In fact, we actually have experience with this already.
 
-We've developed scenarios that modify constraints at a location-level where a new mode was introduced to their network. In our experience this kind of mode conversion is difficult to achieve. Specifically it was introducing intermodal to their network -- which requires coordination from as far upstream as the vendor to as downstream as the individual retailer.
+We've developed scenarios that modify constraints at a location-level where a new mode was introduced to their network. In our experience this kind of mode conversion is difficult to achieve. Specifically, it was introducing intermodal to their network -- which requires coordination from as far upstream as the vendor to as downstream as the individual retailer.
 
 This is often very difficult to implement since vendors and retailers possess some of the most influence in the operation.
 
@@ -218,18 +218,18 @@ This is often very difficult to implement since vendors and retailers possess so
   <img src="https://github.com/cnpryer/cnpryer.github.io/blob/main/assets/img/intermodal_scenario.png?raw=true" alt="Intermodal Scenario" width="70%">
 </p>
 
-We knew we had to open up the flood gates just a little to expose ourselves to the unique scenarios our customers might want to develop.
+We knew we had to open up the floodgates just a little to expose ourselves to the unique scenarios our customers might want to develop.
 
 ## Getting data in more hands
 
-As the DT becomes more available across the business more users will interact with, create, and share their scenarios. Decisions in a logistics firm are often made based on data and coordination between various operations experts. These are individuals at NFI who have years of experience working directly with their customer's routing.
+As the DT becomes more available across the business more users will interact with, create, and share their scenarios. Decisions in a logistics firm are often made based on data and coordination between various operations experts. These are individuals at the logistics firm who have years of experience working directly with their customer's routing.
 
 To roll out the DT to more users, we've crafted roughly the following roadmap objectives:
 
 1. Run scenarios across models and dump that in a data mart
 1. Promote DT dashboard development with analytics group
 1. Introduce users to experimental methods for sharing and analyzing DT data
-1. Push actions up the NFI leadership chain
+1. Push actions up the leadership chain
 1. Distribute infrastructure for user-owned scenarios
 1. Promote downstream development for DT-embedded applications
 
@@ -245,7 +245,7 @@ The main piece of both explicit and implied feedback we've consistently received
 
 There is a lot to unpack in that sentence.
 
-First, *"their own"* scenario means there is a concept of ownership of scenario data. This idea is supported by explicit feedback from our customers where, they often expect to have the ability to take their route guide, modify it, and then run that as a scenario. This idea is also supported by implicit feedback we've observed.
+First, *"their own"* scenario means there is a concept of ownership of scenario data. This idea is supported by explicit feedback from our customers where they often expect to have the ability to take their route guide, modify it, and then run that as a scenario. This idea is also supported by implicit feedback we've observed.
 
 We give scenarios names in our data. So there is a string that is used as the name of a scenario we designed with our customers. The name of scenarios is used to both identify the scenario as well as store information about the scenario.
 
@@ -277,6 +277,6 @@ Going from historically pickup-and-delivery representation to a partitioned spar
 
 We also want to avoid running redundant compute. The same scenario shouldn't run twice. That could get expensive.
 
-And keep in mind, these models float around an NP-Hard problem space (VRP). Without due-diligence models built incorrectly might take too long to run. Or the experience needs to be developed around solve times.
+And keep in mind, these models float around an NP-Hard problem space (VRP). Without due-diligence, models built incorrectly might take too long to run. Or the experience needs to be developed around solve times.
 
-Improving our data storage for this vision and supporting efficient endpoints is a very interesting topic that our team is focused on for 2025.
+Improving our data storage for this vision and supporting efficient endpoints is a very interesting topic that our team is focused on for 2025. If this kind of work interests you then feel free to reach out!
