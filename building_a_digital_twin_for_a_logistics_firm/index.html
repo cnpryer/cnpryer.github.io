@@ -306,7 +306,7 @@
 <p>To understand our DT in more detail it's important to get to know the core operations we model.</p>
 <p>The TM department is responsible for the delivery of product throughout the customer's supply chain network. This could mean moving product from a plant to an end retailer. </p>
 <p align="center">
-  <img src="https://github.com/cnpryer/cnpryer.github.io/blob/main/assets/img/simple_supply_chain.png?raw=true" alt="Simple Supply Chain" width="50%">
+  <img src="https://github.com/cnpryer/cnpryer.github.io/blob/main/assets/img/simple_supply_chain.png?raw=true" alt="Simple Supply Chain" width="55%">
 </p>
 
 <p>Along the way might be several steps. And each step might vary in complexity. </p>
@@ -453,14 +453,15 @@
 <p>You might throw a few data engineers at this to build out the storage and pipelines for these models, but you will only ever support the development of scenarios your data engineers can deliver. Throwing more data engineers at the problem is not going to satisfy the scale our users expect scenarios to be delivered at.</p>
 <p>At the moment we believe the best way to solve this problem is to develop these scenarios with the intention to distribute them behind APIs that allow other users and systems to run and modify them.</p>
 <h2 id="improving-data-storage-and-endpoint-performance">Improving data storage and endpoint performance</h2>
-<p><em>Revisiting the backlog.</em></p>
+<p><em>Revisiting the backlog...</em></p>
 <p>Understanding that this is a user-driven workflow helps us make sense of what a future DT could look like. We can develop scenarios for our customers, but we only dump runs into a dashboard backend. Each customer has access to what is dumped into that database.</p>
 <p>The next step currently planned for the project is delivering those models in a way where their runs and input parameters are available on-demand.</p>
 <p>This means we want to support endpoints that can be used from a client. We want the client to give the user the ability to run the scenario they would like to review with their team.</p>
 <p>There are many things we've learned about the data storage side of this problem.</p>
 <p>One is that you want to support front-loading the transformation of model data as much as you can. This means that if you're running a solver, the format of target input data can be slow to produce given our source data structure.</p>
 <p>Going from historically pickup-and-delivery representation to a partitioned sparse matrix indexed by stop pairs can be resource intensive.</p>
-<p>In addition, we also want to avoid running redundant compute. And keep in mind, these models float around an NP-Hard problem space (VRP). Without due-diligence models built incorrectly might take too long to run. Or the experience needs to be developed around solve times.</p>
+<p>We also want to avoid running redundant compute. The same scenario shouldn't run twice. That could get expensive.</p>
+<p>And keep in mind, these models float around an NP-Hard problem space (VRP). Without due-diligence models built incorrectly might take too long to run. Or the experience needs to be developed around solve times.</p>
 <p>Improving our data storage for this vision and supporting efficient endpoints is a very interesting topic that our team is focused on for 2025.</p>
 
 
