@@ -15,7 +15,7 @@ My journey building a Digital Twin (DT) for a logistics firm -- lessons learned 
 - [Deploying models behind APIs](#deploying-models-behind-apis)
 - [Improving data storage and endpoint performance](#improving-data-storage-and-endpoint-performance)
 
-### What is a Digital Twin (DT)?
+## What is a Digital Twin (DT)?
 
 I work for a logistics firm called [NFI Industries](https://nfiindustries.com). The company offers a variety of services and resources to other businesses to manage or support their supply chains.
 
@@ -25,14 +25,14 @@ I've found this introduction to the business very important to clarify early on 
 
 For a TM department a DT encompasses the entire capability of reproducing the execution of a customer's routes.
 
-### The transportation operations
+## The transportation operations
 
 To understand our DT in more detail it's important to get to know the core operations we model.
 
 The TM department is responsible for the delivery of product throughout the customer's supply chain network. This could mean moving product from a plant to an end retailer. 
 
 <p align="center">
-  <img src="https://github.com/cnpryer/cnpryer.github.io/blob/main/assets/img/simple_supply_chain.png?raw=true" alt="Simple Supply Chain" width="50%">
+  <img src="https://github.com/cnpryer/cnpryer.github.io/blob/main/assets/img/simple_supply_chain.png?raw=true" alt="Simple Supply Chain" width="55%">
 </p>
 
 Along the way might be several steps. And each step might vary in complexity. 
@@ -49,7 +49,7 @@ The routing operations **will** vary by customer. This is an important aspect of
 
 The DT is a separate system used to emulate that entire operation.
 
-### Minimum Viable Product (MVP)
+## Minimum Viable Product (MVP)
 
 I started out at NFI developing specialized models for our customers. The first few years of my career I spent a lot of time on complicated projects that took several months to deliver. The work gave me unique experience building supply chain network and transportation models at scale for large businesses.
 
@@ -61,9 +61,9 @@ The models I developed earlier in my career often highlighted high-value operati
 
 After we established that there was interest in understanding the quantifiable impact of various operational decisions, we wanted to develop a small scale model to give our customers something to interact with.
 
-We served up a basic dashboard with a model's results for a set of low-hanging-fruit scenarios.
+We served up a basic dashboard with a model's results for a set of low-hanging fruit scenarios.
 
-### Narrowing scope
+## Narrowing scope
 
 This really should be treated as a massive endeavor, but we're cognizant of this and implement an aggressive scope-trimming strategy. Our process is very feedback-oriented. I want to make sure we're working on things that make sense to work on. You can't do that without being able to test enhancements with the customer.
 
@@ -94,7 +94,7 @@ Deciding what to work on and when to do it is important to me -- and to the team
 
 We selected four of our customers to start out with based on a combination of their current operations, scale, and existing relationships.
 
-### Designing data models and storage for specific use-cases
+## Designing data models and storage for specific use-cases
 
 Early on we realized our existing BI infrastructure would work against us. Historically, dashboards have been built off of a monolithic reporting server developed for business analysts and custom portals. It worked for its use-cases, but for the DT we needed to be able to give customers access to a lot of data. And we wanted to make sure to create an experience they'd want to come back to.
 
@@ -118,7 +118,7 @@ We had two clear use-cases to support early on:
 1. A scenario-vs-scenario view of your data
 1. An interface for running a scenario
 
-#### A data model for storing source data
+### A data model for storing source data
 
 Let's focus on the specialized system our TM team leverages to execute routing. More specifically we'll focus on the data used by the system for routing.
 
@@ -140,7 +140,7 @@ This is an oversimplification of our source data storage. There are many more en
 
 The main use-case the source data supports is generating model data.
 
-#### A data model for storing dashboard data
+### A data model for storing dashboard data
 
 Scenario data isn't helpful without methods for consuming it. Our customers currently access other data through existing BI, so we wanted to add a view for their scenario data. The main use-case for this data is review and comparison of scenario data.
 
@@ -152,7 +152,7 @@ A lot of computations are done with a pickup-and-delivery format. So this design
 
 We want the experience to feel familiar, but at the same time we want to leave room for necessary innovation.
 
-#### A data model for scenario runs
+### A data model for scenario runs
 
 > ⚠️ Disclaimer: This is currently a roadmap item.
 
@@ -170,7 +170,7 @@ One way to do this would be to store model transformations with versioning. So s
 
 If you're building a scenario off of another, you might need to *search* for that scenario before you create your new scenario. Fetching a previously run scenario can be done with indexed scenario names, labels, modifications, and more.
 
-### Making DT scenarios easy to support
+## Making DT scenarios easy to support
 
 If you have never supported a scenario where a user can add a carrier to a route guide then there is upfront work to offer that.
 
@@ -186,7 +186,7 @@ The more we can re-use for new scenarios the easier it is to build them. The eas
 
 If there are more implementable decisions it becomes much more likely for action to be taken directly from a DT-embedded workflow.
 
-### Exploring more of the problem space
+## Exploring more of the problem space
 
 One of the lessons we learned early on was how truly valuable feedback was for development. Before we built up intuition towards a scenario-vs-scenario requirement, we learned how users interact with dashboards already part of TM's BI.
 
@@ -208,9 +208,9 @@ More importantly there is the domain side of the problem.
 
 We intentionally limited scope so that focus was on hot paths for value. If modifications to specific constraints yield consistently interesting insights then we want to prioritize those. This is great for moving quickly, but there is a cost. You're biasing your exposure to your problem space.
 
-It's possible there are unique scenarios that provide as much (if not more) value as the low-hanging-fruit we've focused on. In fact, we actually have experience with this already.
+It's possible there are unique scenarios that provide as much (if not more) value as the low-hanging fruit we've focused on. In fact, we actually have experience with this already.
 
-We've developed scenarios that specifically modify constraints at a location-level where a new mode was introduced to their network. In our experience this kind of mode conversion is difficult to achieve. Specifically it was introducing intermodal to their network -- which requires coordination from as far upstream as the vendor to as downstream as the individual retailer.
+We've developed scenarios that modify constraints at a location-level where a new mode was introduced to their network. In our experience this kind of mode conversion is difficult to achieve. Specifically it was introducing intermodal to their network -- which requires coordination from as far upstream as the vendor to as downstream as the individual retailer.
 
 This is often very difficult to implement since vendors and retailers possess some of the most influence in the operation.
 
@@ -220,7 +220,7 @@ This is often very difficult to implement since vendors and retailers possess so
 
 We knew we had to open up the flood gates just a little to expose ourselves to the unique scenarios our customers might want to develop.
 
-### Getting data in more hands
+## Getting data in more hands
 
 As the DT becomes more available across the business more users will interact with, create, and share their scenarios. Decisions in a logistics firm are often made based on data and coordination between various operations experts. These are individuals at NFI who have years of experience working directly with their customer's routing.
 
@@ -235,7 +235,7 @@ To roll out the DT to more users, we've crafted roughly the following roadmap ob
 
 After finding success driving actionable decisions with our customers, we've introduced more consumers of DT data. We believe that if we continue to develop the DT with our customers we'll eventually need to match the scale in demand for those scenarios. A scale where the DT is embedded in the user's workflow.
 
-### Deploying models behind APIs
+## Deploying models behind APIs
 
 > ⚠️ Disclaimer: This is currently a roadmap item.
 
@@ -245,7 +245,7 @@ The main piece of both explicit and implied feedback we've consistently received
 
 There is a lot to unpack in that sentence.
 
-First, *"their own"* scenario means there is a concept of ownership of scenario data. This idea is supported by explicit feedback from our customers where they often expect to have the ability to take their route guide, modify it, and then run that as a scenario. This idea is also supported by implicit feedback we've observed.
+First, *"their own"* scenario means there is a concept of ownership of scenario data. This idea is supported by explicit feedback from our customers where, they often expect to have the ability to take their route guide, modify it, and then run that as a scenario. This idea is also supported by implicit feedback we've observed.
 
 We give scenarios names in our data. So there is a string that is used as the name of a scenario we designed with our customers. The name of scenarios is used to both identify the scenario as well as store information about the scenario.
 
@@ -259,11 +259,11 @@ You might throw a few data engineers at this to build out the storage and pipeli
 
 At the moment we believe the best way to solve this problem is to develop these scenarios with the intention to distribute them behind APIs that allow other users and systems to run and modify them.
 
-### Improving data storage and endpoint performance
+## Improving data storage and endpoint performance
 
-*Revisiting the backlog.*
+*Revisiting the backlog...*
 
-Understanding this is a user-driven workflow helps us make sense of what a future DT could look like. We can develop scenarios for our customers, but we only dump runs into a dashboard backend. Each customer has access to what is dumped into that database.
+Understanding that this is a user-driven workflow helps us make sense of what a future DT could look like. We can develop scenarios for our customers, but we only dump runs into a dashboard backend. Each customer has access to what is dumped into that database.
 
 The next step currently planned for the project is delivering those models in a way where their runs and input parameters are available on-demand.
 
@@ -275,6 +275,8 @@ One is that you want to support front-loading the transformation of model data a
 
 Going from historically pickup-and-delivery representation to a partitioned sparse matrix indexed by stop pairs can be resource intensive.
 
-In addition, we also want to avoid running redundant compute. And keep in mind, these models float around an NP-Hard problem space (VRP). Without due-diligence models built incorrectly might take too long to run. Or the experience needs to be developed around solve times.
+We also want to avoid running redundant compute. The same scenario shouldn't run twice. That could get expensive.
+
+And keep in mind, these models float around an NP-Hard problem space (VRP). Without due-diligence models built incorrectly might take too long to run. Or the experience needs to be developed around solve times.
 
 Improving our data storage for this vision and supporting efficient endpoints is a very interesting topic that our team is focused on for 2025.
