@@ -419,13 +419,13 @@
 <p>More importantly there is the domain side of the problem.</p>
 <p>We intentionally limited scope so that focus was on hot paths for value. If modifications to specific constraints yield consistently interesting insights then we want to prioritize those. This is great for moving quickly, but there is a cost. You're biasing your exposure to your problem space.</p>
 <p>It's possible there are unique scenarios that provide as much (if not more) value as the low-hanging fruit we've focused on. In fact, we actually have experience with this already.</p>
-<p>We've developed scenarios that modify constraints at a location-level where a new mode was introduced to their network. In our experience this kind of mode conversion is difficult to achieve. Specifically it was introducing intermodal to their network -- which requires coordination from as far upstream as the vendor to as downstream as the individual retailer.</p>
+<p>We've developed scenarios that modify constraints at a location-level where a new mode was introduced to their network. In our experience this kind of mode conversion is difficult to achieve. Specifically, it was introducing intermodal to their network -- which requires coordination from as far upstream as the vendor to as downstream as the individual retailer.</p>
 <p>This is often very difficult to implement since vendors and retailers possess some of the most influence in the operation.</p>
 <p align="center">
   <img src="https://github.com/cnpryer/cnpryer.github.io/blob/main/assets/img/intermodal_scenario.png?raw=true" alt="Intermodal Scenario" width="70%">
 </p>
 
-<p>We knew we had to open up the flood gates just a little to expose ourselves to the unique scenarios our customers might want to develop.</p>
+<p>We knew we had to open up the floodgates just a little to expose ourselves to the unique scenarios our customers might want to develop.</p>
 <h2 id="getting-data-in-more-hands">Getting data in more hands</h2>
 <p>As the DT becomes more available across the business more users will interact with, create, and share their scenarios. Decisions in a logistics firm are often made based on data and coordination between various operations experts. These are individuals at the logistics firm who have years of experience working directly with their customer's routing.</p>
 <p>To roll out the DT to more users, we've crafted roughly the following roadmap objectives:</p>
@@ -445,7 +445,7 @@
 <p>The DT is responsible for several massive changes to our customers' operations. These are huge wins for the project, and for our customers, but there are lessons we've learned that we have not yet addressed.</p>
 <p>The main piece of both explicit and implied feedback we've consistently received working with our customers is the ability to build and run a scenario of their own.</p>
 <p>There is a lot to unpack in that sentence.</p>
-<p>First, <em>"their own"</em> scenario means there is a concept of ownership of scenario data. This idea is supported by explicit feedback from our customers where, they often expect to have the ability to take their route guide, modify it, and then run that as a scenario. This idea is also supported by implicit feedback we've observed.</p>
+<p>First, <em>"their own"</em> scenario means there is a concept of ownership of scenario data. This idea is supported by explicit feedback from our customers where they often expect to have the ability to take their route guide, modify it, and then run that as a scenario. This idea is also supported by implicit feedback we've observed.</p>
 <p>We give scenarios names in our data. So there is a string that is used as the name of a scenario we designed with our customers. The name of scenarios is used to both identify the scenario as well as store information about the scenario.</p>
 <p>One user might call a scenario something another user may understand better in another way. This is actually a big deal since our ability to drive actionable decisions is limited by the user's ability to share that scenario's story.</p>
 <p>The scenario is a concept the user develops, so it should be stored with that data. When scenario data is reviewed and shared the name is not as relevant as the story being introduced. The user may want to share that story differently depending on the scenario.</p>
@@ -461,8 +461,8 @@
 <p>One is that you want to support front-loading the transformation of model data as much as you can. This means that if you're running a solver, the format of target input data can be slow to produce given our source data structure.</p>
 <p>Going from historically pickup-and-delivery representation to a partitioned sparse matrix indexed by stop pairs can be resource intensive.</p>
 <p>We also want to avoid running redundant compute. The same scenario shouldn't run twice. That could get expensive.</p>
-<p>And keep in mind, these models float around an NP-Hard problem space (VRP). Without due-diligence models built incorrectly might take too long to run. Or the experience needs to be developed around solve times.</p>
-<p>Improving our data storage for this vision and supporting efficient endpoints is a very interesting topic that our team is focused on for 2025.</p>
+<p>And keep in mind, these models float around an NP-Hard problem space (VRP). Without due-diligence, models built incorrectly might take too long to run. Or the experience needs to be developed around solve times.</p>
+<p>Improving our data storage for this vision and supporting efficient endpoints is a very interesting topic that our team is focused on for 2025. If this kind of work interests you then feel free to reach out!</p>
 
 
 
